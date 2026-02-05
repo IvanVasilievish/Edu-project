@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../githowto"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "external-js"
+	}
+}
