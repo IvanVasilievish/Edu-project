@@ -56,15 +56,39 @@ const personalMovieDB = {
 //       c = prompt ('Один из последних просмотренных фильмов?'),
 //       d = prompt ('На сколько оцените его?')
 
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
-
+//       personalMovieDB.movies[a] = b;
+//       personalMovieDB.movies[c] = d;
+      
 
 // console.log(personalMovieDB);
 
 
 
 // ______________________Решение 1 к практике 2______________________
+
+for (let i = 0; i < 2; i++) {
+   const a = prompt ('Один из последних просмотренных фильмов?',''),
+         b = prompt ('На сколько оцените его?','');
+
+    if(a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log ('Done');
+    } else {
+       console.log ('Error');
+       i--;
+    }   
+}
+
+if (personalMovieDB.count < 10) {
+    console.log("Просмотрено довольно мало фильмов");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log("Вы классический зритель");
+}    else if (personalMovieDB.count >= 30) {
+    console.log("Вы киноман");
+} else {console.log("Произошла ошибка");    
+}
+
+console.log(personalMovieDB);
 
 // for (let i = 0; i < 2; i++) {
 //     const a = prompt ('Один из последних просмотренных фильмов?',''),
@@ -131,35 +155,38 @@ const personalMovieDB = {
 
 // _______________________Решение 4 к практике 2 (через с ограничением ошибочных попыток)________________________
 
-let attempts = 0;
-const maxAttempts = 5;
+// let attempts = 0;
+// const maxAttempts = 5;
 
-for (i = 0; i < 2; i++) {
-    const a = prompt ('Один из последних просмотренных фильмов?',''),
-          b = prompt ('На сколько оцените его?','');
-    if (a != null && b != null && a != '' && b != '' && a.length <50) {
-        personalMovieDB.movies[a] = b;
-        console.log('Done_4');
-        attemps = 0;
-        i++;    
-} else {console.log('Error_4');
-    i--;
-    attemps++;   
+// for (i = 0; i < 2; i++) {
+//     const a = prompt ('Один из последних просмотренных фильмов?',''),
+//           b = prompt ('На сколько оцените его?','');
+//     if (a != null && b != null && a != '' && b != '' && a.length <50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('Done_4');
+//         attemps = 0;
+//         i++;    
+// } else {console.log('Error_4');
+//     i--;
+//     attemps++;   
     
-    if (attempts < maxAttempts) {
-        console.log('Слишком много неудачных попыток. Прерываю.');
-            break;
-        }
-    }
-} 
+//     if (attempts < maxAttempts) {
+//         console.log('Слишком много неудачных попыток. Прерываю.');
+//             break;
+//         }
+//     }
+// } 
 
-if (personalMovieDB.count < 10) {
-    console.log("Просмотрено довольно мало фильмов");
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-    console.log("Вы классический зритель");
-} else if (personalMovieDB.count >= 30) {
-    console.log("Вы киноман");
-} else {console.log("Произошла ошибка")
- }
+// if (personalMovieDB.count < 10) {
+//     console.log("Просмотрено довольно мало фильмов");
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//     console.log("Вы классический зритель");
+// } else if (personalMovieDB.count >= 30) {
+//     console.log("Вы киноман");
+// } else {console.log("Произошла ошибка")
+//  }
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
+
+
+
